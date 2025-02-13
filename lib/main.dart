@@ -1,8 +1,13 @@
 import 'package:color_clock/pages/clock_main/clock_main_binding.dart';
 import 'package:color_clock/pages/clock_main/clock_main_view.dart';
+import 'package:color_clock/pages/clock_now/clock_now_binding.dart';
+import 'package:color_clock/pages/clock_now/clock_now_view.dart';
 import 'package:color_clock/pages/clock_setting/clock_setting_binding.dart';
 import 'package:color_clock/pages/clock_setting/clock_setting_view.dart';
 import 'package:color_clock/pages/events/event.dart';
+import 'package:color_clock/pages/events/marry.dart';
+import 'package:color_clock/pages/net_error/check_net_binding.dart';
+import 'package:color_clock/pages/net_error/check_net_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -29,7 +34,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: NClock,
-      initialRoute: '/clockMain',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -81,6 +86,9 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> NClock = [
+  GetPage(name: '/', page: () => const ClockNowView(), binding: ClockNowBinding()),
   GetPage(name: '/clockMain', page: () => ClockMainPage(), binding: ClockMainBinding()),
+  GetPage(name: '/clockMarry', page: () => const Marry()),
   GetPage(name: '/clockSetting', page: () => ClockSettingPage(), binding: ClockSettingBinding()),
+  GetPage(name: '/net_error', page: () => CheckNetView(), binding: CheckNetBinding()),
 ];

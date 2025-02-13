@@ -24,7 +24,7 @@ class Marry extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.vfgax.value)),
+              url: WebUri.uri(Uri.parse(controller.whayuvo.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

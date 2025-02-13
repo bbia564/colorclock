@@ -11,8 +11,8 @@ class ClockNowView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.carroll.value
-              ? const CircularProgressIndicator(color: Colors.green)
+          () => controller.lubowitz.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class ClockNowView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.fiuknwrh();
+              controller.xfbm();
             },
             icon: const Icon(
               Icons.restart_alt,
