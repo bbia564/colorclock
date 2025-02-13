@@ -39,6 +39,7 @@ class PageLogic extends GetxController {
 
   @override
   void onInit() {
+    checkNet();
     super.onInit();
     xfbm();
   }
